@@ -1,13 +1,12 @@
 # Tron Game (Python)
 
-A two-player light cycle battle inspired by *Tron: Legacy*. The project demonstrates a clean architecture approach with clear separation between the domain model, application services, infrastructure adapters, and presentation logic. It is designed to be interview-ready with comprehensive documentation and type-safe Python code.
-
+A two-player light cycle battle inspired by *Tron: Legacy*. The project demonstrates clear separation between the domain model, application services, infrastructure adapters, and presentation logic. 
 ## Features
 
-- 🕹️ Local multiplayer action for two players using keyboard controls.
-- 🧱 Deterministic collision handling using a domain-first approach instead of pixel sampling.
-- 🧩 Clean architecture and SOLID principles applied across the codebase.
-- 🧪 Fully type annotated code with docstrings to aid readability.
+- Local multiplayer action for two players using keyboard controls.
+- Deterministic collision handling using a domain-first approach instead of pixel sampling.
+- Clean architecture and SOLID principles applied across the codebase.
+- Fully type annotated code with docstrings to aid readability.
 
 ## Project Structure
 
@@ -52,15 +51,6 @@ python main.py
 ### Exiting
 
 Close the game window or press <kbd>Esc</kbd> to quit.
-
-## Design Overview
-
-The goal of this refactor was to create a codebase that is easy to explain during a technical interview. Key aspects include:
-
-- **Single Responsibility Principle:** Each class has one reason to change. For example, `GameService` contains the game rules, while `PygameDisplay` only worries about rendering.
-- **Open/Closed Principle:** Behaviour can be extended (e.g., swapping the renderer) without modifying core domain classes.
-- **Dependency Inversion:** High-level modules depend on abstractions (`DisplayPort`), enabling easy substitution in tests.
-- **Separation of Concerns:** Presentation code orchestrates the application without mixing in game rules or rendering logic.
 
 ## Testing and Development Tips
 
